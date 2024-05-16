@@ -19,9 +19,13 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
         <input type="file" id="imageInput" accept="image/*"><br><br>
         <img id="inputImage" src="letters.png" alt="Input Image" style="display:block;"><br><br>
         <label for="letterInput">Letters:</label><br>
-        <input type="text" id="letterInput"
-            value="ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜabcdefghijklmnopqrstuvwxyzäöü0123456789.,-„“!?"><br><br>
+        <input type="text" id="letterInput" value="ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜabcdefghijklmnopqrstuvwxyzäöü0123456789.,-„“!?"><br><br>
     </div>
+	<div>
+		<label for="customBackground">Custom Backgroundcolor:</label><br>
+		<input type="checkbox" id="customBackgroundToggle">
+		<input type="color" id="customBackground" value="#ff00ff"/><br><br>
+	</div>
     <div>
         <button id="generateButton">Generate Image</button>
     </div>

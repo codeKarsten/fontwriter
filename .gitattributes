@@ -1,0 +1,8 @@
+*.css             text diff=css
+*.htm             text diff=html
+*.html            text diff=html
+*.js              text
+
+*.png             binary
+
+*.md              text diff=markdown

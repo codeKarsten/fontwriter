@@ -1,46 +1,55 @@
 body {
-    margin: 50px 25%;
-    padding: 0;
-    font-family: Calibri, Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+	margin: 50px 25%;
+	padding: 0;
+	font-family: Calibri, Arial, sans-serif;
+	background-color: #f2f2f2;
+	color: #333;
 }
 
 .container {
-    max-width: 50%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 5%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 50%;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 5%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"],
 textarea {
-    width: calc(100% - 5%);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+	width: calc(100% - 5%);
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 button {
-    padding: 10px 5%;
-    background-color: #666;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	padding: 10px 5%;
+	background-color: #666;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+	background-color: #555;
 }
 
 canvas {
-    display: block;
-    margin-top: 5%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+	display: block;
+	margin-top: 5%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#customImage {
+	display: none;
+}
+
+/* When the radio button is checked, hide the adjacent element */
+input[id="radioCustom"]:checked+#customImage {
+	display: block;
 }

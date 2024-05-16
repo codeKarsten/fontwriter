@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const textInput = document.getElementById('textInput');
+	const radioDefault = document.getElementById('radioDefault');
+	const radioCustom = document.getElementById('radioCustom');
+	const customImage = document.getElementById('customImage');
 	const imageInput = document.getElementById('imageInput');
 	const inputImage = document.getElementById('inputImage');
 	const letterInput = document.getElementById('letterInput');
@@ -7,6 +10,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	const customBackground = document.getElementById('customBackground');
 	const canvas = document.getElementById('outputCanvas');
 	const context = canvas.getContext('2d');
+
+	// Add event listeners to the radio buttons
+	radioDefault.addEventListener('change', function () {
+		if (this.checked) {
+			radioCustom.checked = false; // Uncheck the radioCustom if radioDefault is checked
+			customImage.style.display = 'none'; // Hide the customImage fieldset
+		}
+	});
+
+	radioCustom.addEventListener('change', function () {
+		if (this.checked) {
+			radioDefault.checked = false; // Uncheck the radioDefault if radioCustom is checked
+			customImage.style.display = 'block'; // Show the customImage fieldset
+		}
+	});
+
+	letterInput.value = "";
+	for (var i = 32; i <= 255; i++) {
+		letterInput.value += String.fromCharCode(i);
+	}
 
 	imageInput.addEventListener('change', function (event) {
 		const file = event.target.files[0];
